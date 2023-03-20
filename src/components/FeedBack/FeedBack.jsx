@@ -2,10 +2,11 @@ import PropTypes from 'prop-types';
 import { ButtonList, ButtonItem, Button } from './FeedBack.styled';
 
 export const FeedBack = ({ options, handleClick }) => {
+  const optionsKey = Object.keys(options);
   return (
     <>
       <ButtonList>
-        {options.map((option, index) => {
+        {optionsKey.map((option, index) => {
           const label = option.charAt(0).toUpperCase() + option.slice(1);
 
           return (
